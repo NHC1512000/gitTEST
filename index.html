@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F8 - shop</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="action.js"></script>
+    <script src="https://kit.fontawesome.com/2ef4ae1e8e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title-form-box">Đăng nhập</h1>
+            <form action="">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+
+                    <div class="input-field" id="emailField">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Gmail">
+                    </div>
+
+                    <div class="input-field" id="passwordField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p id="text">Quên mật khẩu ? <a href="#" id="signIn">Nhấn vào đây</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signUpBtn">Đăng nhập</button>
+                    <button type="button" id="signInBtn" class="disable">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let signupBtn = document.getElementById("signUpBtn");
+        let signin = document.getElementById("signIn");
+        let signinBtn = document.getElementById("signInBtn");
+        let title = document.getElementById("title-form-box");
+        let nameField = document.getElementById("nameField");
+
+        signin.onclick = function() {
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Đăng ký";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+
+        }
+    </script>
+</body>
+
+</html>
